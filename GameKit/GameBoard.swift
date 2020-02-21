@@ -21,7 +21,7 @@ struct GameBoard: View {
 
                 CollisionObject(position: CGPoint(x: 300, y: 300), avatarPosition: self.avatarPosition)
 
-                CollisionObject(position: CGPoint(x: 200, y: 450), avatarPosition: self.avatarPosition)
+                CollisionObject(position: CGPoint(x: 150, y: 500), avatarPosition: self.avatarPosition)
                 
                 // Place avatar.
                 Avatar(position: self.avatarPosition)

@@ -17,22 +17,24 @@ struct ContentView: View {
 
             ZStack {
                 GameBoard(avatarPosition: self.avatarPosition)
+
+                VStack {
+                    Spacer()
+                    HStack {
+                        Spacer()
+                        ControllerButtons(avatarPosition: self.$avatarPosition)
+                        Spacer()
+                    }
+                    .padding()
+                }
             }
             .onAppear() {
+                // Initialize position to center of the screen.
                 self.avatarPosition = CGPoint(x: geometry.size.width / 2, y: geometry.size.height / 2)
-            }
-        
-            VStack {
-                Spacer()
-                HStack {
-                    Spacer()
-                    ControllerButtons(avatarPosition: self.$avatarPosition)
-                    Spacer()
-                }
-                .padding()
             }
         }
     }
+
 }
 
 struct ContentView_Previews: PreviewProvider {

@@ -36,17 +36,6 @@ struct ControllerButtons: View {
             }
 
             Button(action: {
-                self.avatarPosition.x += 20
-            }) {
-                Text("Right")
-                    .font(.system(size: 14))
-                    .frame(width: 60, height: 44)
-                    .background(Color.black)
-                    .foregroundColor(Color.white)
-                    .cornerRadius(30)
-            }
-
-            Button(action: {
                 self.avatarPosition.x -= 20
             }) {
                 Text("Left")
@@ -57,6 +46,16 @@ struct ControllerButtons: View {
                     .cornerRadius(30)
             }
 
+            Button(action: {
+                self.avatarPosition.x += 20
+            }) {
+                Text("Right")
+                    .font(.system(size: 14))
+                    .frame(width: 60, height: 44)
+                    .background(Color.black)
+                    .foregroundColor(Color.white)
+                    .cornerRadius(30)
+            }
         }
         .padding()
         .border(Color.black, width: 3)

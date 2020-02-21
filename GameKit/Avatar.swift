@@ -26,6 +26,7 @@ struct Avatar: View {
         }
         .frame(width: 50, height: 50)
         .position(position)
+        .animation(.easeInOut(duration: 0.2))
     }
 }
 
